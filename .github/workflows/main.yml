@@ -1,0 +1,11 @@
+name: Consumer Workflow 2
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+jobs:
+  call-reusable-workflow:
+    uses: pappasam/reusable-workflow-demo/.github/workflows/reusable-workflow.yml@main
+    with:
+      file_name: "world.txt"
